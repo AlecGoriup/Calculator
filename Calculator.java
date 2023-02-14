@@ -11,9 +11,9 @@ public class Calculator {
 
         scan.nextLine(); // skip newLine char
 
-        System.out.println("Would you like to perform addition or subtraction with the two numbers");
+        System.out.println(
+                "Would you like to perform addition, subtraction, multiplication, or division with the two numbers");
         String choice = scan.nextLine();
-        System.out.println(choice);
 
         if (choice.equals("addition")) {
             int result = wholeNum1 + wholeNum2;
@@ -25,6 +25,18 @@ public class Calculator {
             int result = wholeNum1 - wholeNum2;
 
             System.out.println("Subtracted together: " + wholeNum1 + " - " + wholeNum2 + " = " + result + ".");
+        }
+
+        if (choice.equals("multiplication")) {
+            int result = wholeNum1 * wholeNum2;
+
+            System.out.println("Multiplied together: " + wholeNum1 + " x " + wholeNum2 + " = " + result + ".");
+        }
+
+        if (choice.equals("division")) {
+            int result = wholeNum1 / wholeNum2;
+
+            System.out.println("Divided together: " + wholeNum1 + " / " + wholeNum2 + " = " + result + ".");
         }
 
     }
