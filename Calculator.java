@@ -34,9 +34,15 @@ public class Calculator {
         }
 
         if (choice.equals("division")) {
-            float result = wholeNum1 / wholeNum2;
+            if (wholeNum2 == 0) {
+                System.out.println("Error: Divide by Zero");
+            }
 
-            System.out.println("Divided together: " + wholeNum1 + " / " + wholeNum2 + " = " + result + ".");
+            else {
+                float result = wholeNum1 / wholeNum2;
+
+                System.out.println("Divided together: " + wholeNum1 + " / " + wholeNum2 + " = " + result + ".");
+            }
         }
 
     }
